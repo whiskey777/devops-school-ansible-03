@@ -1,0 +1,7 @@
+---
+- name: Configuring service
+  service:
+    name: vsftpd
+    state: "started"
+    enabled: yes
+

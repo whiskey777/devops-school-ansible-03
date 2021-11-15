@@ -1,0 +1,4 @@
+project_root: /var/www/html
+webserver_port_list:
+  - { port: 80/tcp, state: enabled }
+  - { port: 443/tcp, state: enabled }

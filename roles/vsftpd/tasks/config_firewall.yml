@@ -1,0 +1,9 @@
+- name: Make sure firewall ports are open
+  firewalld:
+    zone: public
+    port: "{{ item.port }}"
+    permanent: true
+    state: "{{ item.state }}"
+  loop: "{{ ftp_port_list }}"
+  notify:
+    - restart firewalld

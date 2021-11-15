@@ -1,0 +1,6 @@
+---
+- name: Installing Apache web serber
+  package:
+    name: "{{ apache_package }}"
+    state: present
+

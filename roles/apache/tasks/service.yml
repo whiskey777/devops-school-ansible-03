@@ -1,0 +1,6 @@
+---
+- name: Enable Apache on system reboot
+  service: 
+    name: "{{ apache_package }}"
+    enabled: yes
+    state: started

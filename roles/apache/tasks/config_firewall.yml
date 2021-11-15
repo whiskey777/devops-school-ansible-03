@@ -1,0 +1,9 @@
+- name: Opening ports for Apache web server
+  firewalld:
+    zone: public
+    port: "{{ item.port }}"
+    permanent: true
+    state: "{{ item.state }}"
+  loop: "{{ webserver_port_list }}"
+  notify:
+    - restart firewalld

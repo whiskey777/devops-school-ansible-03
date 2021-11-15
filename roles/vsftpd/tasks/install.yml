@@ -1,0 +1,9 @@
+---
+- name: Installing vsftpd
+  package:
+    name: "vsftpd"
+    state: present
+- name: policycoreutils-python-utils # required for SeLinux setup
+  package:
+    name: "policycoreutils-python-utils"
+    state: present

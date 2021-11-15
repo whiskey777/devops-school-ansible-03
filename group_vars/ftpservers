@@ -1,0 +1,10 @@
+ftp_port_list:
+  - { port: 20/tcp, state: enabled }
+  - { port: 21/tcp, state: enabled }
+anonymous_enable: "YES"
+anon_upload_enable: "YES"
+anon_mkdir_write_enable: "YES"
+anon_upload: "/var/ftp/pub/upload"
+selinux_options:
+  - { option: allow_ftpd_anon_write, state: true}
+  - { option: allow_ftpd_full_access, state: true}

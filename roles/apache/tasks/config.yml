@@ -1,0 +1,11 @@
+---
+- name: Create the index file at project root
+  copy: 
+    dest: "{{ project_root }}/index.html"
+    owner: apache 
+    group: apache 
+    mode: 0644
+    content: |
+     <h1>Welcome to my web server<h1>
+  notify:
+    - restart {{ apache_package }}
